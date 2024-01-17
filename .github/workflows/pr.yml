@@ -42,7 +42,7 @@ jobs:
         env:
           # this token is not tied to any repository
           # and can be used to set the commit status in the repos I have access to
-          PERSONAL_GH_TOKEN: ${{ secrets.PERSONAL_GH_TOKEN }}
+          PERSONAL_GH_TOKEN: ${{ secrets.ORG_REPO_TOKEN }}
 
       - name: Run tests 🧪
         # https://github.com/khulnasoft/github-action
@@ -53,7 +53,7 @@ jobs:
         env:
           # this token is not tied to any repository
           # and can be used to set the commit status in the repos I have access to
-          PERSONAL_GH_TOKEN: ${{ secrets.PERSONAL_GH_TOKEN }}
+          PERSONAL_GH_TOKEN: ${{ secrets.ORG_REPO_TOKEN }}
           # point the plugin to update the commit status of the head commit
           # TIP: we need to use an environment variable that does not start with GITHUB
           # since those variables are set by the GitHub and can't be overridden
