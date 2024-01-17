@@ -1,0 +1,52 @@
+name: ci
+on:
+  push:
+    branches:
+      - main
+jobs:
+  test:
+    runs-on: ubuntu-20.04
+    steps:
+      - name: Checkout 🛎
+        uses: actions/checkout@v3
+
+      - name: Print GITHUB variables 🖨
+        run: npx @khulnasoft-lab/print-env GITHUB
+
+      - name: Install dependencies 📦
+        # https://github.com/khulnasoft/github-action
+        uses: khulnasoft/github-action@v5
+        with:
+          runTests: false
+
+      - name: Set common status 🎬
+        run: |
+          node ./bin/set-gh-status --owner khulnasoft-lab --repo set-github-status \
+            --sha $GITHUB_SHA --status pending \
+            --context "Khulnasoft E2E tests" --description "Running tests..."
+        env:
+          # this token is not tied to any repository
+          # and can be used to set the commit status in the repos I have access to
+          PERSONAL_GH_TOKEN: ${{ secrets.PERSONAL_GH_TOKEN }}
+          DEBUG: set-github-status
+
+      - name: Run tests 🧪
+        # https://github.com/khulnasoft/github-action
+        uses: khulnasoft/github-action@v5
+        with:
+          install: false
+        env:
+          # this token is not tied to any repository
+          # and can be used to set the commit status in the repos I have access to
+          PERSONAL_GH_TOKEN: ${{ secrets.PERSONAL_GH_TOKEN }}
+          # update the common status after finishing the tests
+          COMMON_STATUS: 'Khulnasoft E2E tests'
+
+      - name: Semantic Release 🚀
+        if: github.ref == 'refs/heads/main'
+        uses: cycjimmy/semantic-release-action@v3
+        with:
+          branch: main
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
