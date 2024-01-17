@@ -27,7 +27,7 @@ jobs:
         env:
           # this token is not tied to any repository
           # and can be used to set the commit status in the repos I have access to
-          PERSONAL_GH_TOKEN: ${{ secrets.PERSONAL_GH_TOKEN }}
+          PERSONAL_GH_TOKEN: ${{ secrets.ORG_REPO_TOKEN }}
           DEBUG: set-github-status
 
       - name: Run tests 🧪
@@ -38,7 +38,7 @@ jobs:
         env:
           # this token is not tied to any repository
           # and can be used to set the commit status in the repos I have access to
-          PERSONAL_GH_TOKEN: ${{ secrets.PERSONAL_GH_TOKEN }}
+          PERSONAL_GH_TOKEN: ${{ secrets.ORG_REPO_TOKEN }}
           # update the common status after finishing the tests
           COMMON_STATUS: 'Khulnasoft E2E tests'
 
