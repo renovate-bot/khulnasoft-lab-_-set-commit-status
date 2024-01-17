@@ -29,9 +29,9 @@
   },
   "homepage": "https://github.com/khulnasoft-lab/set-github-status#readme",
   "devDependencies": {
+    "khulnasoft": "/khulnasoft",
     "prettier": "^3.0.0",
-    "semantic-release": "^21.0.2",
-    "khulnasoft": "/khulnasoft"
+    "semantic-release": "^21.1.2"
   },
   "dependencies": {
     "arg": "^5.0.1",
