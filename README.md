@@ -163,7 +163,7 @@ This plugin uses [debug](https://github.com/debug-js/debug#readme) module to out
 
 ## Small print
 
-Author: Gleb Bahmutov &copy; 2022
+Author: Md Sulaiman &copy; 2022
 
 - [@khulnasoft-lab](https://twitter.com/khulnasoft-lab)
 - [glebkhulnasoft-lab.com](https://glebkhulnasoft-lab.com)
@@ -179,7 +179,7 @@ Support: if you find any problems with this module, email / tweet /
 
 ## MIT License
 
-Copyright (c) 2022 Gleb Bahmutov &lt;gleb.khulnasoft-lab@gmail.com&gt;
+Copyright (c) 2022 Md Sulaiman &lt;infosulaimanbd@gmail.com&gt;
 
 Permission is hereby granted, free of charge, to any person
 obtaining a copy of this software and associated documentation

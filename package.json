@@ -17,12 +17,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/khulnasoft-lab/set-github-status.git"
+    "url": "https://github.com/khulnasoft-lab/set-github-status"
   },
   "keywords": [
     "khulnasoft-plugin"
   ],
-  "author": "Gleb Bahmutov <gleb.khulnasoft-lab@gmail.com>",
+  "author": "Md Sulaiman <infosulaimanbd@gmail.com>",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/khulnasoft-lab/set-github-status/issues"
