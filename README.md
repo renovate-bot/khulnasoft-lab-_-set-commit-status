@@ -1,4 +1,4 @@
-# set-github-status ![khulnasoft version](https://img.shields.io/badge/khulnasoft-11.0.1-brightgreen) [![ci](https://github.com/khulnasoft-lab/set-github-status/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/khulnasoft-lab/set-github-status/actions/workflows/ci.yml)
+# set-github-status ![khulnasoft version](https://img.shields.io/badge/khulnasoft-/khulnasoft-brightgreen) [![ci](https://github.com/khulnasoft-lab/set-github-status/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/khulnasoft-lab/set-github-status/actions/workflows/ci.yml)
 
 > A little Khulnasoft plugin for setting GitHub commit status
 
